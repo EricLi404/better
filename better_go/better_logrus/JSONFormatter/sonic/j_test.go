@@ -4,9 +4,9 @@ import (
 	"testing"
 )
 
-func Benchmark_jsoniterJson(b *testing.B) {
+func Benchmark_sonicJson(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		bytes, err := jsoniterJson(testData)
+		bytes, err := sonicJson(testData)
 		if err != nil {
 			b.Fatal(err)
 		}
@@ -16,9 +16,9 @@ func Benchmark_jsoniterJson(b *testing.B) {
 	}
 }
 
-func Benchmark_jsoniterJsonEncoder(b *testing.B) {
+func Benchmark_sonicJsonEncoder(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		bytes, err := jsoniterJsonEncoder(testData)
+		bytes, err := sonicJsonEncoder(testData)
 		if err != nil {
 			b.Fatal(err)
 		}

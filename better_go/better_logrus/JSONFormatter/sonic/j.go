@@ -37,14 +37,14 @@ func nativeJson(data interface{}) ([]byte, error) {
 	return append(marshal, '\n'), err
 }
 
-func jsoniterJsonEncoder(data interface{}) ([]byte, error) {
+func sonicJsonEncoder(data interface{}) ([]byte, error) {
 	b := &bytes.Buffer{}
 	encoder := encoder2.NewStreamEncoder(b)
 	err := encoder.Encode(data)
 	return b.Bytes(), err
 }
 
-func jsoniterJson(data interface{}) ([]byte, error) {
+func sonicJson(data interface{}) ([]byte, error) {
 	marshal, err := sonic.Marshal(data)
 	return append(marshal, '\n'), err
 }
