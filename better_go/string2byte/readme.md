@@ -23,7 +23,7 @@ type SliceHeader struct {
 
 ```text
 
- go test -bench=. -cpu=1 -benchmem
+go test -bench=. -cpu=1 -benchmem
 goos: darwin
 goarch: arm64
 pkg: better_go/string2byte
@@ -40,4 +40,21 @@ PASS
 ok      better_go/string2byte   5.058s
 
 
+
+go test -bench=. -cpu=1 -benchmem -benchtime=5s
+goos: linux
+goarch: amd64
+pkg: better_go/string2byte
+cpu: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+
+BenchmarkDirectToString  	885053401	          6.783 ns/op	       0 B/op	       0 allocs/op
+BenchmarkUnsafeToString  	1000000000	         0.4197 ns/op	       0 B/op	       0 allocs/op
+
+BenchmarkDirectToBytes   	594386966	          10.08 ns/op	       0 B/op	       0 allocs/op
+BenchmarkUnsafeToBytes1  	1000000000	         0.4190 ns/op	       0 B/op	       0 allocs/op
+BenchmarkUnsafeToBytes11 	1000000000	         0.4392 ns/op	       0 B/op	       0 allocs/op
+BenchmarkUnsafeToBytes12 	1000000000	         0.4210 ns/op	       0 B/op	       0 allocs/op
+BenchmarkUnsafeToBytes2  	1000000000	         0.4203 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	better_go/string2byte	16.041s
 ```
