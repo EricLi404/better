@@ -23,23 +23,21 @@ type SliceHeader struct {
 
 ```text
 
-go test -bench=. -cpu=1 -benchmem
-
+ go test -bench=. -cpu=1 -benchmem
 goos: darwin
 goarch: arm64
 pkg: better_go/string2byte
 
+BenchmarkDirectToString         485622948                2.266 ns/op           0 B/op          0 allocs/op
+BenchmarkUnsafeToString         1000000000               0.3120 ns/op          0 B/op          0 allocs/op
 
-BenchmarkDirectToString         514813948                2.309 ns/op           0 B/op          0 allocs/op
-BenchmarkUnsafeToString         1000000000               0.3145 ns/op          0 B/op          0 allocs/op
-
-
-BenchmarkDirectToBytes          515457274                2.342 ns/op           0 B/op          0 allocs/op
-BenchmarkUnsafeToBytes1         1000000000               0.3184 ns/op          0 B/op          0 allocs/op
-BenchmarkUnsafeToBytes2         1000000000               0.3145 ns/op          0 B/op          0 allocs/op
-
-
+BenchmarkDirectToBytes          512121726                2.325 ns/op           0 B/op          0 allocs/op
+BenchmarkUnsafeToBytes1         1000000000               0.3128 ns/op          0 B/op          0 allocs/op
+BenchmarkUnsafeToBytes11        1000000000               0.3141 ns/op          0 B/op          0 allocs/op
+BenchmarkUnsafeToBytes12        1000000000               0.3137 ns/op          0 B/op          0 allocs/op
+BenchmarkUnsafeToBytes2         1000000000               0.3154 ns/op          0 B/op          0 allocs/op
 PASS
-ok      better_go/string2byte   4.368s
+ok      better_go/string2byte   5.058s
+
 
 ```

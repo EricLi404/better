@@ -52,6 +52,33 @@ func unsafeToBytes1(s string) []byte {
 	))
 }
 
+func unsafeToBytes11(s string) []byte {
+	return *(*[]byte)(unsafe.Pointer(
+		&struct {
+			string
+			Cap int
+		}{
+			s,
+			len(s),
+		},
+	))
+}
+
+func unsafeToBytes12(s string) []byte {
+	l := len(s)
+	return *(*[]byte)(unsafe.Pointer(
+		&struct {
+			string
+			Len int
+			Cap int
+		}{
+			s,
+			l,
+			l,
+		},
+	))
+}
+
 func unsafeToBytes2(s string) []byte {
 	x := (*[2]uintptr)(unsafe.Pointer(&s))
 	b := [3]uintptr{x[0], x[1], x[1]}
