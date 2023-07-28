@@ -1,9 +1,12 @@
 package string2byte
 
-import "unsafe"
+import (
+	"unsafe"
+)
 
 var (
 	by = []byte("testByte")
+	// by = []byte(strings.Repeat("a", 1024))
 )
 
 // toString 把 []byte 转换为 string 没有多余的内存开销。

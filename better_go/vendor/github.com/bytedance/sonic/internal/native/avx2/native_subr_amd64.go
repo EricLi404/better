@@ -9,48 +9,51 @@ package avx2
 func __native_entry__() uintptr
 
 var (
-    _subr__f64toa       = __native_entry__() + 903
-    _subr__html_escape  = __native_entry__() + 10249
-    _subr__i64toa       = __native_entry__() + 3915
-    _subr__lspace       = __native_entry__() + 429
-    _subr__lzero        = __native_entry__() + 13
-    _subr__quote        = __native_entry__() + 5328
-    _subr__skip_array   = __native_entry__() + 21867
-    _subr__skip_number  = __native_entry__() + 25515
-    _subr__skip_object  = __native_entry__() + 21904
-    _subr__skip_one     = __native_entry__() + 19172
-    _subr__u64toa       = __native_entry__() + 4008
-    _subr__unquote      = __native_entry__() + 7794
-    _subr__validate_one = __native_entry__() + 25632
-    _subr__value        = __native_entry__() + 14495
-    _subr__vnumber      = __native_entry__() + 17330
-    _subr__vsigned      = __native_entry__() + 18644
-    _subr__vstring      = __native_entry__() + 16453
-    _subr__vunsigned    = __native_entry__() + 18903
+    _subr__f32toa       = __native_entry__() + 28752
+    _subr__f64toa       = __native_entry__() + 976
+    _subr__html_escape  = __native_entry__() + 12608
+    _subr__i64toa       = __native_entry__() + 4720
+    _subr__lspace       = __native_entry__() + 448
+    _subr__lzero        = __native_entry__() + 16
+    _subr__quote        = __native_entry__() + 6192
+    _subr__skip_array   = __native_entry__() + 26400
+    _subr__skip_number  = __native_entry__() + 28496
+    _subr__skip_object  = __native_entry__() + 26448
+    _subr__skip_one     = __native_entry__() + 24496
+    _subr__u64toa       = __native_entry__() + 4832
+    _subr__unquote      = __native_entry__() + 9136
+    _subr__validate_one = __native_entry__() + 28640
+    _subr__value        = __native_entry__() + 17184
+    _subr__vnumber      = __native_entry__() + 22240
+    _subr__vsigned      = __native_entry__() + 23792
+    _subr__vstring      = __native_entry__() + 19568
+    _subr__vunsigned    = __native_entry__() + 24144
 )
 
 const (
-    _stack__f64toa = 120
+    _stack__f32toa = 728
+    _stack__f64toa = 712
     _stack__html_escape = 72
-    _stack__i64toa = 24
+    _stack__i64toa = 16
     _stack__lspace = 8
     _stack__lzero = 8
-    _stack__quote = 56
-    _stack__skip_array = 152
-    _stack__skip_number = 96
-    _stack__skip_object = 152
-    _stack__skip_one = 152
+    _stack__quote = 72
+    _stack__skip_array = 136
+    _stack__skip_number = 80
+    _stack__skip_object = 136
+    _stack__skip_one = 136
     _stack__u64toa = 8
     _stack__unquote = 72
-    _stack__validate_one = 152
-    _stack__value = 408
-    _stack__vnumber = 312
+    _stack__validate_one = 136
+    _stack__value = 336
+    _stack__vnumber = 248
     _stack__vsigned = 16
-    _stack__vstring = 112
-    _stack__vunsigned = 8
+    _stack__vstring = 128
+    _stack__vunsigned = 24
 )
 
 var (
+    _ = _subr__f32toa
     _ = _subr__f64toa
     _ = _subr__html_escape
     _ = _subr__i64toa
@@ -72,6 +75,7 @@ var (
 )
 
 const (
+    _ = _stack__f32toa
     _ = _stack__f64toa
     _ = _stack__html_escape
     _ = _stack__i64toa
